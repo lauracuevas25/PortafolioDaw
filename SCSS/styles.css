@@ -1,0 +1,163 @@
+@charset "UTF-8";
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecera {
+  background-color: #2196F3;
+  color: #fff;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.titulo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#TituloCabecera {
+  font-size: 2em;
+  color: #fff;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.portada {
+  padding: 250px 0;
+  padding-left: 10%;
+  background: url("../Imagenes/showcase.jpg") center 30%/cover no-repeat;
+  color: #000;
+  text-align: left;
+}
+.portada #eslogan {
+  font-size: 4em;
+  color: #000;
+}
+.portada .esloganPequeño {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+.portada .contact {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.segundaPagina {
+  padding: 50px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.segundaPagina h2, .segundaPagina h3, .segundaPagina img, .segundaPagina p {
+  width: 100%;
+}
+.segundaPagina h2, .segundaPagina h3 {
+  display: block;
+  margin-bottom: 10px;
+}
+.segundaPagina h2 {
+  font-size: 2.5em;
+  color: #2196F3;
+}
+.segundaPagina h3 {
+  font-size: 1.5em;
+}
+.segundaPagina img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.segundaPagina p {
+  overflow: hidden;
+}
+
+#aboutUs, #services, #contact {
+  flex: 0 1 calc(25% - 40px);
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #2196F3;
+}
+#aboutUs h2, #services h2, #contact h2 {
+  color: #2196F3;
+}
+#aboutUs img, #services img, #contact img {
+  max-width: 25%;
+  height: auto;
+}
+
+.listaServicios {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.listaServicios > div {
+  border: 2px solid #2196F3;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.infoServicio {
+  color: #555;
+}
+
+.terceraPagina, .cuartaPagina {
+  padding: 50px;
+}
+
+.formulario {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #2196F3;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.follow {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}/*# sourceMappingURL=styles.css.map */
