@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="LauraCuevas" content="T2-3" >
+    <link rel="icon" type="image/x-icon" href="https://iesventura.es/_ies_datos/LOGO_new.jpg">
+    <title>Tarea 2-2</title>
+</head>
+<body>
+   <strong>Revisa la consola.</strong>
+    <script>
+        const A = 8, 
+         B = 6;
+         let diferencia = NaN,
+        resta=true,
+        logro,
+        suma=true;
+        function conseguido() {
+            if (diferencia) {
+               logro = true;
+            }
+            console.log(logro);
+        }
+        
+        if (A) {
+            
+            console.log('Los valores a operar son ' + A + ' y ' + B + '.');
+            
+           
+        }
+        
+        
+        if (suma) {
+            console.log('Ejecutando la suma...');
+            console.log('La suma es: ' + (A + B));
+        }
+        
+        if (resta) {
+            console.log('Ejecutando la resta...');
+            diferencia = A - B;
+            console.log('La diferencia es: ' + diferencia);
+        }
+        
+        conseguido();
+        logro ? console.log('¡Hurra!') : console.log('Ups...'); // operador condicional ternario
+                
+    </script>
+</body>
+</html>

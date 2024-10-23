@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T2-13" />
+    <title>Cifrado con Clave Numérica</title>
+  </head>
+  <body>
+  </body>
+  <script>
+    // Solicita el texto a cifrar y lo convierte a mayúsculas
+    let textoACifrar = prompt("Introduce texto a cifrar").toUpperCase();
+
+    // Solicita la clave numérica
+    let clave = prompt("Introduce la clave numérica");
+
+    // Convierte la clave numérica en un array de números
+    let arrayContenedorClave = [...clave].map(Number); // Convierte cada dígito de la clave en un número porque si no no puedo.
+
+    let arrayContenedorTexto = [];
+
+    // Variable para llevar el índice de el arrayContenedorClave
+    let i = 0;
+
+    
+    for (let letra of textoACifrar) {
+      let codigoLetra = letra.charCodeAt(0); //en el caso de for of siempre va a ser cero ya que estoy recogiendo valeros y no recorriendo indices
+
+      // Suma el código de la letra con el valor numérico de la clave
+      let desplazamiento = arrayContenedorClave[i % arrayContenedorClave.length]; // Vuelve a la posicion 0 de la clave si es más corta que el texto porque cuando llega a la posicion 3,
+      // como el tamaño es 3 y la i llega a tres, el resultrado es 0 entonces vuelve a usar la posicion 0 de la clave
+
+      // Añade la letra cifrada al array de texto, sumando el desplazamiento de la clave
+      arrayContenedorTexto.push(codigoLetra + desplazamiento);
+
+      // Incrementa el índice de la clave para poder hacer el % y que el resto de correcto
+      i++;
+    }
+
+    // Convierte los códigos ASCII cifrados de nuevo a caracteres
+    let textoCifrado = String.fromCharCode(...arrayContenedorTexto);
+
+    // Muestra el texto en claro y cifrado
+    document.write("<h3>El texto a cifrar es: " + textoACifrar + "</h3>");
+    document.write("<h4>El texto cifrado es: " + textoCifrado + "</h4>");
+  </script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T3-3" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Imprimir asteriscos</title>
+  </head>
+  <body></body>
+  <script>
+    let numerosAleatorios = [];
+    for (let i = 0; i < 20; i++) {
+      let numero = Math.random() * 50 + 1;
+      numerosAleatorios.push(numero); //aqui metos los numeros aleatorios del 1 al 50 al array
+    }
+
+    for (let indice in numerosAleatorios) {
+      let numero = numerosAleatorios[indice];
+      let asteriscos = ""; //marcamos que va a ser string
+
+      for (let asterisco of Array(numero)) {
+        // array(numero) crea un array con el numero de posiciones
+        asteriscos += "*"; //metemos tantos asteriscos como valor de numeros haya
+      }
+      document.write("Posición " + (parseInt(indice) + 1) + ": " + numero + " : " + asteriscos + "<br>");
+    }
+    
+
+  </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T2-5" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Tarea 2-6.2</title>
+  </head>
+
+  <body>
+    <script>
+      pedirNumero();
+
+      function pedirNumero() {
+        // Muestra por consola un número aleatorio entre dos dados por el usuario.
+        let num1 = parseInt(prompt("introduce un numero"));
+        let num2 = parseInt(
+          prompt("introduce el 2 numero que sea mas alto que el primero")
+        );
+
+        while (num1 > num2) {
+          console.log(
+            "introduce bien el numero, el primero mas pequeño que el segundo "
+          );
+          pedirNumero();
+        }
+        console.log(
+          `El numero aleatorio entre ${num1} y ${num2} es ` +
+            numeroAleatorio(num1, num2).toFixed(0)
+        );
+      }
+
+      function numeroAleatorio(num1, num2) {
+        return Math.random() * (num2 - num1) + num1;
+      }
+
+      // Utiliza prompt, console.log, Math.random y operaciones aritméticas.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="t2-7" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Tarea 2-8-1</title>
+  </head>
+
+  <body>
+    <script>
+      let abrirCuenta = false;
+      while (!abrirCuenta) {
+        abrirCuenta = confirm("Quiere abrir una cuenta de ahorro?");
+      }
+      /* Pregunta al usuario si desea abrir una cuenta de ahorro.
+           - Si acepta, continúa con el programa. 
+           - Si no, vuelve a preguntar.
+        */
+
+      let ahorro = 0;
+      /* Solicita al usuario la cantidad positiva que desee ahorrar. */
+      const objetivoAhorro = parseInt(prompt("Introduce tu objetivo de ahorro"));
+      document.write("<h1>OBJETIVO AHORRO: " + objetivoAhorro + "</h1>");
+
+
+      do {
+        let ingreso = parseInt(prompt("Introduce cantidad a ingresar"));
+        ahorro += ingreso;
+        document.write("<h3>TOTAL ingreso: " + ingreso + "</h3>");
+      } while (ahorro < objetivoAhorro);
+      document.write("<h1>OBJETIVO cumplido: " + ahorro + " todo esto has ahorrado</h1>");
+
+      alert("OBJETIVO CUMPLIDO HURRAAAA");
+
+      /* Pregunta al usuario cuánto dinero quiere añadir. 
+           El dinero se añadirá a lo ahorrado.
+           Cuando la hucha haya cumplido el objetivo,
+           se mostrará un texto de objetivo conseguido 
+           con la cantidad ahorrada.
+        */
+    </script>
+  </body>
+</html>

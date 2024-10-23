@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="LauraCuevas" content="T2-13">
+    <link rel="icon" type="image/x-icon" href="https://iesventura.es/_ies_datos/LOGO_new.jpg">
+    <title>Imprimir tabla</title>
+</head>
+<body>
+    <div id="tabla"></div>
+</body>
+<script>
+//Crea una página que pinte una tabla en HTML. 
+
+//La página pide al usuario un número entero positivo asignado a filas.
+let filas = parseInt(prompt("Introduce un número positivo de filas"));
+//La página pide al usuario un número entero positivo asignado a columnas. 
+let columnas = parseInt(prompt("Introduce un número positivo de columnas"));
+//La página dibujará una tabla con tantas filas y columnas como indique el usuario
+
+let contenedorTabla = document.getElementById("tabla");
+let tabla = document.createElement("table");
+tabla.border=1;
+tabla.cellPadding=2;
+ let contador= 0; //esto es para rellenar las celdas para contarlas.
+
+ for( let fila=0; fila<filas;fila++){
+
+    let tr = document.createElement("tr");//estas son mis filas
+
+    for(let columna = 0; columna<columnas;columna++){
+        let td = document.createElement("td");
+        contador++;
+        td.textContent = contador;
+        tr.appendChild(td);
+    }
+    tabla.appendChild(tr);
+ }
+ contenedorTabla.appendChild(tabla);
+
+//introduciendo el número natural correspondiente a cada celda.*/
+
+
+
+
+</script>
+</html>

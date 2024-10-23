@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="LauraCuevas" content="T2-9" />
+    <link rel="icon" type="image/x-icon" href="https://iesventura.es/_ies_datos/LOGO_new.jpg">
+    <title>Tarea 2-9</title>
+</head>
+
+<body>
+    <script>
+        function obtenerColorAleatorio() {
+            const rojo = Math.floor(Math.random() * 256); // Genera un valor aleatorio para rojo
+            const verde = Math.floor(Math.random() * 256); // Genera un valor aleatorio para verde
+            const azul = Math.floor(Math.random() * 256); // Genera un valor aleatorio para azul
+            return `rgb(${rojo}, ${verde}, ${azul})`; // Retorna el color en formato rgb()
+        }
+
+        // Cambiar el color de fondo de la página al cargar
+        document.body.style.backgroundColor = obtenerColorAleatorio()
+    </script>
+</body>
+
+</html>

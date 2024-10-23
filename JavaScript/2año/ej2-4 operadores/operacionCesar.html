@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T2-13" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Imprimir tabla</title>
+  </head>
+  <body></body>
+  <script>
+    let textoACifrar = prompt("Introduce texto a cifrar");
+    let claveNumerica = parseInt(prompt("Introduce la clave numerica"));
+    let arrayContenedor = [];
+
+    for (let letra of textoACifrar) {
+      arrayContenedor.push(letra.charCodeAt(0) + claveNumerica);
+    }
+    let textoCifrado = String.fromCharCode(...arrayContenedor);
+    document.write("<h3>El texto a cifrar es: " + textoACifrar);
+    document.write("<h4>El texto cifrado es: " + textoCifrado);
+  </script>
+</html>
+23

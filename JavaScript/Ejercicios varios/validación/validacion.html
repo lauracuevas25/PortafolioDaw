@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe de Incidencia</title>
+  <style>
+  
+h1 {
+  background-color: orange; 
+  color: white; 
+  padding: 20px;
+  margin: 0;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#imagenArea {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body onload="iniciarPagina()">
+
+  <h1>Informe de Incidencia</h1>
+
+  <div id="formulario">
+    <label for="tipoIncidencia">Tipo de Incidencia:</label>
+    <select id="tipoIncidencia" onchange="cambiarImagen()">
+      <option value="distribucion">Distribución</option>
+      <option value="oficina">Oficina</option>
+      <option value="produccion">Producción</option>
+    </select>
+
+    <label for="numeroSerie">Número de Serie:</label>
+    <input type="text" id="numeroSerie" placeholder="dalee" onblur="validarNumeroSerie()">
+
+    <button type="button" onclick="mostrarDescripcion()">Mostrar Descripción</button>
+
+    <img id="imagenArea" src="" alt="Elige incidencias">
+
+    <textarea id="descripcion" rows="4" cols="50" style="display:none;" placeholder="Describa la incidencia..."></textarea>
+  </div>
+
+  <script src="validacion.js"></script>
+</body>
+</html>
