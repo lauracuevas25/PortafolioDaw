@@ -12,5 +12,43 @@
       </head>
 <body>
     
-</body>
+</body>/creo un array de 49 nuemros ordenados y luego hago dos for anidados para intercambiarlos y desordenados del 0 al 48 porque tengo 49 nuemros
+[a,b]=[b,a] esto cambia la posicion a por b y b por a sin usar auxiliar
+
+<script>
+        let numeros = [];
+        let cantidadDeNumeros = 49;
+    
+        
+        for (let i = 1; i <= cantidadDeNumeros; i++) {
+            numeros.push(i);
+        }
+    
+        for (let jugada = 0; jugada < 10; jugada++) {
+    
+            
+            for (let j = 0; j < cantidadDeNumeros; j++) {
+                const posicion1 = Math.floor(Math.random() * cantidadDeNumeros);
+                const posicion2 = Math.floor(Math.random() * cantidadDeNumeros);
+                
+                [numeros[posicion1], numeros[posicion2]] = [numeros[posicion2], numeros[posicion1]];
+
+            /*  let aux = numeros[posicion1];
+              numeros[posicion1] = numeros[posicion2];
+              numeros[posicion2] = aux;                */
+            }
+    
+            
+            let resultado = numeros.slice(0, 6);
+    
+            // ordenados con funcion flecha :  resultado.sort((a, b) => a - b);
+            
+    
+            console.log(`Jugada numero ${jugada + 1}: ${resultado}`);
+    
+        }
+
+
+
+</script>
 </html>

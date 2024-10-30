@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T3-5" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Palindromos</title>
+  </head>
+  <body></body>
+  <script>
+    let palabra = prompt(
+      "Introduce la palabra que quieres comrpobar que sea palindroma"
+    ).toLowerCase();
+    //let palabraInvertida = palabra;
+    let palindormo = true;
+
+    for (let i = 0; i < palabra.length / 2 && palindormo; i++) {//compara hasta la mitad de la palabra
+      if (palabra[i] != palabra[palabra.length - i - 1]) {//empieza por atras 
+        console.log(palabra[i] + " / " + palabra[palabra.length - i - 1]);//para comprobar que funcione
+        palindormo = false;
+      }
+    }
+    alert(palindormo);
+   let palindormoInvertido  = palabra.split("").reverse().join("");
+    alert(palindormoInvertido);
+  </script>
+</html>
