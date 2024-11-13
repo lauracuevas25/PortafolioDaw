@@ -10,7 +10,41 @@
 
 <body>
     <h1></h1>
-    <script src="script.js"></script>
-</body>
 
+</body>
+<script>
+    //creamos un array de 10 posiciones con njumeros aleatorios del 0 al 50 y nos creamos dos funciones donde una nos devuelva cuantos son impares y otra de cuantos son pares
+    let numerosAleatorios=[];
+    let pares= 0;
+    let impares= 0;
+    let numeroAleatorio;
+
+
+    for(let i = 0; i<1;i++){
+         numeroAleatorio= Math.floor(Math.random() *50)+1;
+        numerosAleatorios.push(numeroAleatorio);
+        console.log(numeroAleatorio);
+    }
+/*
+    function nPares(numerosAleatorios){
+        for (let numero of numerosAleatorios){
+            if(numero%2==0){
+                pares++;
+            }
+        }
+        return pares;
+    }
+    function nImpares(numerosAleatorios){
+        for (let numero of numerosAleatorios){
+            if(numero%2!=0){
+            impares++;
+            }
+        }
+        return impares;
+    }*/
+    const esPar =(numero)=>numero%2==0;
+    console.log(esPar(numeroAleatorio));
+   // console.log(`Hay ${pares} numeros pares y ${nImpares(numerosAleatorios)} numeros impares`);
+ //   console.log(`Hay ${ nPares(numerosAleatorios)} numeros pares y ${nImpares(numerosAleatorios)} numeros impares`);
+</script>
 </html>

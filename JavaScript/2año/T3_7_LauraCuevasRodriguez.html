@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T3-7" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Usuarios</title>
+</head>
+
+
+    <h2>Formulario de Datos Personales</h2>
+    <div id="divFormulario">
+   
+        <table>
+            <tr>
+             <td><label for="nombre">Nombre:</label> 
+               <input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required></td>
+            </tr>
+            <tr>
+                <td><label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="tel" name="telefono" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="codigoPostal">Codigo postal:</label>
+                <input type="number" id="codigoPostal" name="codigoPostal" required></td>
+            </tr>
+          
+        </table>
+   <button onclick="recogerDatos()";>Enviar</button>
+      </div>
+
+</body>
+<script>
+let texto1 ="Rocio:Osorno:01101315Y:612345649:rocio@outlook.com:28001";
+let texto2="Sonia: Sastre:15340807Z:765430987:ssastre@gmail.com:43071";
+let texto3="Olivia:Soriano:46216401X:654567098:osor01@educa.madrid.org:28660";
+let texto4="Elena:Costaguta:70068005T:7123098654:ecostag@madrid.org:45230";
+let texto5="Orestes:Sosa:52243028T::sosaorestes2000@yahoo.com:28001";
+
+
+
+function recogerDatos(){
+    let nombre=document.getElementById('nombre').value;
+    let apellidos=document.getElementById('apellido').value;
+    let dniV=document.getElementById('dni').value;
+    let tel=document.getElementById('tel').value;
+    let email=document.getElementById('email').value;
+    let codigoPostal=document.getElementById('codigoPostal').value;
+console.log(nombre,email);
+    
+
+
+    
+
+function validarDni(){
+    let letrasOficiales= "TRWAGMYFPDXBNJZSQVHLCKET";
+
+    let numDni= dniV.substring(0,8);
+let letraDni= dniV.substring(8,9);
+let dniValido=false;
+console.log(letraDni);
+console.log(dniV);
+if (letraDni != letrasOficiales[parseInt(numDni) % 23]) {
+ // alert(" dni  no valido");
+
+}else{
+    let cadena = nombre + ':'+ apellidos+':'+dni+':'+tel+ ', '+ email +', ' + codigoPostal;
+    console.log(cadena);
+    dniValido=true;
+}
+};
+//creo function para sacar usuario y otra para validar dni
+console.log(email);
+let prueba = email.indexOf("@");
+let servidor = email.slice(prueba+1,email.lenght());
+let usuario1= nombre.slice(0,1).toLowerCase();
+let apellido2= apellidos.slice(-3).toLowerCase();
+let usuario= usuario1+'_'+apellido2;
+let pais= '\u{1f1ea}\u{1f1f8}';
+document.write(pais);
+
+
+};
+</script>
+</html>
