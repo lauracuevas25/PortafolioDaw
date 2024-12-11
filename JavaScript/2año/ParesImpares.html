@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="LauraCuevas" content="T4-1" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+    />
+    <title>Pares e impares</title>
+  </head>
+
+  <body></body>
+  <script>
+    let numeros = [];
+
+    for (i = 0; i < 40; i++) {
+      let numeroAleatorio = Math.floor(Math.random() * 50) + 1;
+      numeros.push(numeroAleatorio);
+      console.log(numeroAleatorio);
+    }
+    
+    function pares(arrayNumeros) {
+      let contadorPares = 0;
+      for (numeroAleatorio of arrayNumeros) {
+       
+        if (numeroAleatorio % 2 == 0) {
+          contadorPares++;
+        }
+      }
+      return contadorPares;
+    }
+    console.log("Total número de pares: "+ pares(numeros));
+    
+    function impares(arrayNumeros) {
+      let contadorImpares = 0;
+      for (numeroAleatorio of arrayNumeros) {
+        if (numeroAleatorio % 2 != 0) {
+          contadorImpares++;
+        }
+      }
+      return contadorImpares;
+    }
+    console.log("Total número de impares: "+ impares(numeros));
+    
+
+    (function contadorDeParesImpares() {
+      let estructura= new Map();
+      estructura.set('par',pares(numeros));
+      estructura.set('impar',impares(numeros));
+     console.log(`ESTRUCTURA MAP-> total de pares: ${estructura.get("par")} y total de impares: ${estructura.get("impar")}`);
+    // console.log(`a: ${estructura.get('par')}`) ;
+     console.log("Total número de pares: "+ pares(numeros));
+
+      console.log("Total número de impares: "+ impares(numeros));
+    })();
+     
+  </script>
+</html>

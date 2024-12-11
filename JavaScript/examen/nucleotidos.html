@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ let secuenciaValida = ['G', 'T', 'T', 'A', 'C', 'A'];
+let nucleotidos=new Map();
+            nucleotidos.set('A', 0);
+    nucleotidos.set('C', 0);
+    nucleotidos.set('G', 0);
+    nucleotidos.set('T', 0);
+        let resultado =(function cuentaNucleotidos(array,nucleotidos){
+            array=array.map(letra=>letra.toUpperCase());
+
+            for(let letra of array){
+                if(letra=="A"||letra=="C"||letra=="G"||letra=="T"){
+                    nucleotidos.set(letra,nucleotidos.get(letra)+1);
+                }else{
+                    return "Secuencia no valida";
+                }
+            }
+            return nucleotidos;
+
+        })(secuenciaValida,nucleotidos);
+        secuenciaValida = ['G', 'T', 'T', 'A', 'C', 'A']; 
+secuenciaNoValida = ['A','T','G','G','C','T','T','A','I','G'];
+
+
+let estaSi=cuentaNucleotidos(secuenciaValida) //Map(4){'A'=>2,'C'=>1,'G'=>1,'T'=>2}
+let estano=cuentaNucleotidos(secuenciaNoValida)
+console.log(estaSi+"<br>"+estano);
+estaSi.forEach((element,clave) => {
+    document.write(`${clave}=> hay ${element}`);
+    
+}); //Error: Secuencia de ADN no válida. Sólo debe contener 'A', 'C', 'G' o 'T'.
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

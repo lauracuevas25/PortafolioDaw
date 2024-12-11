@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let letras = "TRWAGMYFPDXBNJZSQVHLCKET";
+//tiene que tener 8 digitos
+let regexDni = "[0-9]{8}[A-Za-z]{1}";
+let dni;
+do{
+    dni=prompt("Intrduzca su dni");
+
+}while(dni.match(regexDni));
+
+let dniNumeros = dni.substring(0,8);
+let dniLetra= dni.substring(8,9);
+
+if(dniLetra== letras[parseInt(dniNumeros)%23]){
+    alert("Dni correcto")
+}
+</script>
+</html>

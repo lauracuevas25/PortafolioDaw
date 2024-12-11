@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   
+    function esPrimo(n){
+        if(n<=1){return false};
+        for(let i=2;i*i<=n;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+   let array=[1,2,3,4,5,6,7,8,9];
+
+  function esPrimoRecursiva(n,i=2){
+    if(n<=1)return false;
+    if(i*i>n)return true;
+    if(n%i==0)return false;
+    return esPrimo(n,i+1);
+  }
+ 
+ //let arrayPRimos=  array.filter(numeros=>esPrimo(numeros));
+ array.forEach(numero => {
+    console.log(`El numero ${numero} es ${esPrimo(numero)}`);
+ });
+</script>
+</html>

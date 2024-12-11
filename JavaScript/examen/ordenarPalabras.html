@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let setPalabras=new Set();
+let palabras=[];
+let palabra;
+do{
+    palabra=prompt("Introduce una palabra");
+    if(palabra!=""&&palabra!=null){
+        alert("Salgo del programa");
+    }else{
+        setPalabras.add(palabra);
+    }
+}while(palabra!=""&&palabra!=null);
+palabras=[...setPalabras];
+palabras=palabras.sort((a,b)=>b.localeCompare(a,"es"));
+palabras2=palabras.sort((a,b)=>b.lenght-a.lenght);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let mapa= new Map();
+    
+    for(let j=0;j<=10;j++){
+mapa.set(j,0);
+    }
+    
+    for(let i=0;i<100;i++){
+      let  n=Math.floor((Math.random()*10)+1);
+        let aux= mapa.get(n);
+        mapa.set(n,aux+1);
+    }
+    for(let k=1;k<=10;k++){
+        document.write(`Numero ${k}: se repitio; `+mapa.get(k))
+    }
+</script>
+</html>

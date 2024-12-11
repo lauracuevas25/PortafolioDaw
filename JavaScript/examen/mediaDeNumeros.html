@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let numeros=[];
+    let numNuevo;
+    do{
+
+         numNuevo=prompt("Introduzca un numero para sumar");
+        if (isNaN(parseInt(numNuevo))){
+            alert("introduzca un numero por favor");
+          
+           
+        }else{
+         numNuevo=parseInt(numNuevo);
+         numeros.push(numNuevo);
+        };
+       
+    }while(numNuevo!=0&&numNuevo!=null);
+    if(numNuevo==null){
+                alert("Ha cancelado");
+     }else{
+      let media=  numeros.reduce((a,b)=>a+b,0)/numeros.length;
+      console.log(`La media de los numeros ${numeros} es : ${media}`);
+    }
+</script>
+</html>

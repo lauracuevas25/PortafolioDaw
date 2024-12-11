@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let numeros = [];
+    let cantidadNumeros = 49;
+    for (let i = 0; i < cantidadNumeros; i++) {
+      numeros.push(i);
+    }
+
+    for (let jugada = 0; jugada < 10; jugada++) {
+
+      for (let j = 0; j < cantidadNumeros; j++) {
+        let posicion1 = Math.floor(Math.random() * cantidadNumeros + 1);
+        let posicion2 = Math.floor(Math.random() * cantidadNumeros + 1);
+        let aux=numeros[posicion1];
+        numeros[posicion1]=numeros[posicion2];
+        numeros[posicion2]=aux;
+       // [numeros[posicion1],numeros[posicion2]]=[numeros[posicion2],numeros[posicion1]]
+      }
+
+      let resultado=numeros.slice(0,6);
+
+      resultado.sort(a,b=>a-b);
+    }
+
+  </script>
+</html>

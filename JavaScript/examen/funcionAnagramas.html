@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function esAnagrama(...strings){
+    strings=strings.map(palabra=>palabra.toLowerCase());
+
+
+    let stringsOrdenados= strings.map(palabra=>palabra.split("").sort().join(""));
+    let anagrama= stringsOrdenados[0];
+    for(palabra of stringsOrdenados){
+        if(palabra!=anagrama){
+            return false;
+        }
+    }
+    return true;
+}
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

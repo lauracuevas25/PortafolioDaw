@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let numeros=[];
+    for(let i=0;i<20;i++){
+        let numAleatorio=Math.floor((Math.random()*50)+1)
+        numeros.push(numAleatorio);
+    }
+    document.write(numeros);
+for(let asterisco of numeros){
+    document.write(`Numero ${asterisco}:${"*".repeat(asterisco)}<br>`);
+}
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let mapa=new Map();
+
+for(let i=1;i<=10;i++){
+    mapa.set(i,0);
+};
+
+for(let j=0;j<100;j++){
+    let num=Math.floor((Math.random()*10)+1);
+    let aux=mapa.get(num);
+    mapa.set(num,aux+1);
+
+};
+for(let k=1;k<=10;k++){
+    document.write(`Numero ${k}, hay ->${mapa.get(k)}<br>`);
+};
+
+</script>
+</html>

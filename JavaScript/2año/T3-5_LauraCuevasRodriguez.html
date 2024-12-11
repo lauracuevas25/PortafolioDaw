@@ -14,8 +14,9 @@
   <script>
     let palabra = prompt(
       "Introduce la palabra que quieres comrpobar que sea palindroma"
-    ).toLowerCase();
+    ).toLowerCase().replaceAll(" ","");
     //let palabraInvertida = palabra;
+    document.write(palabra);
     let palindormo = true;
 
     for (let i = 0; i < palabra.length / 2 && palindormo; i++) {//compara hasta la mitad de la palabra

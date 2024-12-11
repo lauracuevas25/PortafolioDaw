@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let nombreAlumno;
+    let alumnos=[];
+    let gruposAlumnos= new Map();
+    let contadorGrupos=1;
+    do{
+        nombreAlumno=prompt("Introduzca nombre del alumno");
+        if(alumnos.includes(nombreAlumno)||nombreAlumno=="fin"){
+            alert("El nombre esta repetido o es fin")
+        }else{
+        alumnos.push(nombreAlumno);
+        }
+    }while(nombreAlumno!="fin");
+    console.log(alumnos);
+
+while(alumnos.length>=3){
+gruposAlumnos.set(contadorGrupos,alumnos.splice(0,3));
+contadorGrupos++;
+}
+
+
+for(let i=1;alumnos.length>0;i++){
+gruposAlumnos.set(i,alumnos.pop());
+}
+//ahora los sobrantes
+gruposAlumnos.forEach((valor,indice) => {
+    document.write(`Grupo ${indice}:${valor}`);
+});
+</script>
+</html>

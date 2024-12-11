@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+ let texto = prompt("Introduzca el texto que quiera cibrar").toLowerCase();
+    let clave;
+    do {
+      clave = prompt("introduzca una clave numerica");
+      if (isNaN(parseInt(clave))) {
+        alert("Introduzca clave numerica");
+      }
+    } while (isNaN(parseInt(clave)));
+for(let i=0;i<texto.length;i++){
+    let cifrado=texto[i].charCodeAt()+parseInt(clave[i]);
+    document.write(String.fromCharCode(cifrado));;
+}
+
+</script>
+</html>

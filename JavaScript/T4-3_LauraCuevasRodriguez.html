@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="LauraCuevas" content="T4-3" />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="https://iesventura.es/_ies_datos/LOGO_new.jpg"
+        />
+        <title>Tribonacci</title>
+    </head>
+    
+<body>
+    
+</body>
+<script>
+function tribonacciCallback(numero){
+    if(n=0){return 0};
+    if(n==1||n==2){
+        return 1;
+    }else{
+     let resultado= tribonacciCallback(numero-1)+tribonacciCallback(numero-2) + tribonacciCallback(numero-3);
+return resultado;
+    }
+
+};
+console.log(tribonacciCallback(2)+"esta es con callbacck")
+
+
+function tribonacci(num){
+    if(n=0){return 0};
+    if(n==1||n==2){
+        return 1;
+    };
+    let num1=0;
+    let num2=1;
+    let num3=1;
+    let acumulacion=0;
+    for(let i=2;i<=num;i++){
+        acumulacion=num1+num2+num3;
+        num1=num2;
+        num2=num3;
+        num3=acumulacion;
+console.log(acumulacion);
+    }
+    return acumulacion;
+};
+console.log(tribonacci(4)+"esta es normal");
+
+//tribonacci
+/*
+if(n=0){return 0};
+if(n==1||n==2){
+    return 1;
+};*/
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

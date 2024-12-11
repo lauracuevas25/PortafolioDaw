@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+function mapaRepeticiones(array){
+    let mapa =new Map();
+    for(palabra of array){
+        if(mapa.has(palabra)){
+            mapa.set(palabra,mapa.get(palabra)+1);
+        }else{
+            mapa.set(palabra,1);
+        }
+    }
+    return mapa;
+}
+let palabras = ["manzana", "plátano", "manzana", "perro", "manzana", "plátano"];
+let mapa = mapaRepeticiones(palabras);
+
+mapa.forEach((repeticiones,palabra)=>{
+console.log(`${palabra}:hay ${repeticiones}`)
+});
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function esPalindormo(palabra){
+palabra= palabra.toLowerCase().replaceAll(" ","");
+console.log(palabra);
+    for(let i=0;i<palabra.length/2;i++){
+        if(palabra[i]!=palabra[palabra.length-i-1]){
+            return false
+        }
+    }
+    return true;
+}
+let pruebita="A man a plan a canal Panama";
+console.log(pruebita);
+console.log(esPalindormo(pruebita));
+console.log(pruebita);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
